@@ -1,0 +1,28 @@
+@import '../../styles/vars'
+
+nav
+  position: absolute
+  width: 80vw
+  top: 0
+  left: 10vw
+  padding-top: 5vh
+  padding-bottom: 3vh
+  z-index: 5
+  &.underline
+    border-bottom: 1px solid #d2ddea
+  ul
+    width: 100%
+    li
+      float: left
+      min-width: 20px
+      padding: 0 0px
+      cursor: pointer
+      list-style: none
+      text-decoration: none
+      a
+        cursor: pointer
+        color: $black
+        &.active
+          border-bottom: 1px solid  $black
+          border-color: $teal
+
