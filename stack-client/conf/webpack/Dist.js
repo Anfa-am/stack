@@ -1,4 +1,4 @@
-'use strict';
+use strict';
 
 /**
  * Dist configuration. Used to build the
@@ -6,6 +6,7 @@
  */
 const webpack = require('webpack');
 const WebpackBaseConfig = require('./Base');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 class WebpackDistConfig extends WebpackBaseConfig {
 
@@ -22,7 +23,8 @@ class WebpackDistConfig extends WebpackBaseConfig {
           'process.env.NODE_ENV': '"production"'
         }),
         new webpack.optimize.AggressiveMergingPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin(),
+        new UglifyJSPlugin()
       ]
     };
 
