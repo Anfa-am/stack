@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Loadable from 'react-loadable';
 import { AppContainer } from 'react-hot-loader';
 import { Provider } from 'react-redux';
+
 import {
   HashRouter as Router,
   Route,
@@ -11,7 +13,13 @@ import {
 import store from './stores';
 
 import './styles/base.sass';
-import Home from './containers/Home/Home';
+
+const Loading = () => <div>Loading...</div>;
+
+const Home = Loadable({
+  loader: () => import('./containers/Home/Home'),
+  loading: Loading,
+});
 
 ReactDOM.render(
   <AppContainer>
