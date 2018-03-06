@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { PropTypes } from 'prop-types';
 
 import { NavLink } from 'react-router-dom'
 
@@ -18,8 +17,6 @@ class Nav extends React.Component {
     );
   }
 }
-
-Nav.propTypes = { actions: PropTypes.shape({}) };
 
 function mapStateToProps(state) {
   return {

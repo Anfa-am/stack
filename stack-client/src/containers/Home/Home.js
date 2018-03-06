@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 
 import './home.sass';
@@ -18,8 +17,6 @@ class Home extends Component {
     );
   }
 }
-
-Home.propTypes = { actions: PropTypes.shape({}) };
 
 function mapStateToProps(state) {
   return {

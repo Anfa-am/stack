@@ -163,9 +163,14 @@ class WebpackBaseConfig {
         filename: 'app.js',
         publicPath: './assets/'
       },
-      plugins: [],
+      plugins: [
+        ["transform-react-jsx", { "pragma": "h" }]
+      ],
       resolve: {
         alias: {
+          "react": "preact-compat",
+          "react-dom": "preact-compat",
+          "preact-compat": "preact-compat/dist/preact-compat",
           actions: `${ this.srcPathAbsolute }/actions/`,
           components: `${ this.srcPathAbsolute }/components/`,
           config: `${ this.srcPathAbsolute }/config/${ this.env }.js`,

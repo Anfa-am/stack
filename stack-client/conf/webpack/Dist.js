@@ -1,4 +1,4 @@
-use strict';
+'use strict';
 
 /**
  * Dist configuration. Used to build the
