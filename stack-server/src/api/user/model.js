@@ -35,8 +35,7 @@ const userSchema = new Schema({
   picture: {
     type: String,
     trim: true
-  }, {
-  timestamps: true
+  }
 })
 
 userSchema.path('email').set(function (email) {
